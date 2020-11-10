@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleSQLite</string>
+    <string name="notes_empty">You don\'t have any \n notes added </string>
+</resources>
