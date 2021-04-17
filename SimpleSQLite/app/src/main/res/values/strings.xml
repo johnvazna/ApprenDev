@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">SimpleSQLite</string>
     <string name="notes_empty">You don\'t have any \n notes added </string>
+
+    <!-- Log In -->
+
+    <string name="button_login">Log In</string>
+    <string name="login_hint_email">User email</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_title">Write a little\nthings ?</string>
+    <string name="login_register"><u>Do you have an account?</u></string>
+
+    <!-- Sign Up -->
+
+    <string name="signUp_hint_name">Name</string>
+    <string name="button_signUp">Register</string>
+    <string name="signUp_hint_email">Email</string>
+    <string name="singUp_title">One more step</string>
+    <string name="signUp_hint_password">password</string>
+    <string name="signUp_login"><u>Do you already have an account?</u></string>
+
 </resources>

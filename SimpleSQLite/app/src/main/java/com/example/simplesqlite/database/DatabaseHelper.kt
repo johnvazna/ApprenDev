@@ -21,11 +21,11 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(
 
     private lateinit var database: SQLiteDatabase
 
-    private val TYPE_TEXT = " TEXT "
-    private val TYPE_INTEGER = " INTEGER "
+    private val TYPE_TEXT = " TEXT"
+    private val TYPE_INTEGER = " INTEGER"
 
     companion object {
-        const val DATABASE_VERSION = 1
+        const val DATABASE_VERSION = 2
         const val DATABASE_NAME = "databaseExample.db"
     }
 
@@ -40,10 +40,9 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(
         onCreate(database)
     }
 
-    private val TABLE_USER = "CREATE TABLE " + UserTable.TABLE_NAME + " (" +
-            UserTable.COLUMN_ID + " $TYPE_INTEGER PRIMARY KEY AUTOINCREMENT," +
-            UserTable.COLUMN_USER_ID + TYPE_TEXT + ", " + UserTable.TABLE_NAME + TYPE_TEXT + ", "  +
-            UserTable.COLUMN_EMAIL + TYPE_TEXT + ", " + UserTable.COLUMN_PASSWORD + TYPE_TEXT + " )"
+
+    private val TABLE_USER = ("CREATE TABLE " + UserTable.TABLE_NAME + "(" + UserTable.COLUMN_ID + " INTEGER PRIMARY KEY," +
+            UserTable.COLUMN_NAMES + " TEXT" + ")")
 
     private val TABLE_NOTES = "CREATE TABLE " + NoteTable.TABLE_NAME + " (" +
             NoteTable.COLUMN_ID + " $TYPE_INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -69,7 +68,9 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(
 
     @Synchronized
     fun updateUser(user: User): User? {
-        open()
+        var updateUser: User? = null
+
+        /*open()
 
         val response: Boolean
         var updateUser: User? = null
@@ -86,7 +87,7 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(
             e.localizedMessage
         }
 
-        close()
+        close()*/
         return updateUser
     }
 
@@ -97,7 +98,7 @@ class DatabaseHelper(private val context: Context): SQLiteOpenHelper(
         var response = false
 
         try {
-            response = executionDelete(UserTable.TABLE_NAME, "id = ?", arrayOf(user.id.toString()))
+            //response = executionDelete(UserTable.TABLE_NAME, "id = ?", arrayOf(user.id.toString()))
 
         } catch (e: SQLException) {
             e.localizedMessage
