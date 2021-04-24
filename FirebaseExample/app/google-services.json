@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "696562254305",
+    "project_id": "apprendev-test",
+    "storage_bucket": "apprendev-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696562254305:android:c38e72f2c48a2e1a8ed2a0",
+        "android_client_info": {
+          "package_name": "com.beengala.firebaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696562254305-nk60gsmof9vhu2f03npqe7uav8b7pn5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqbaRhzKaz6u-3vBiej7btw-XAZFLFKYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696562254305-nk60gsmof9vhu2f03npqe7uav8b7pn5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
